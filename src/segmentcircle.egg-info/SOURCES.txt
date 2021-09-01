@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+data/model_weights_dict.pth
+src/segmentcircle/__init__.py
+src/segmentcircle/infer.py
+src/segmentcircle.egg-info/PKG-INFO
+src/segmentcircle.egg-info/SOURCES.txt
+src/segmentcircle.egg-info/dependency_links.txt
+src/segmentcircle.egg-info/entry_points.txt
+src/segmentcircle.egg-info/requires.txt
+src/segmentcircle.egg-info/top_level.txt

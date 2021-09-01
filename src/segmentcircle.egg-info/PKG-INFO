@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: segmentcircle
+Version: 1.0.0
+Summary: A unet segment project
+Home-page: UNKNOWN
+Author: XinDong
+Author-email: author@example.com
+License: UNKNOWN
+Keywords: unet,segmnet,deep learning
+Platform: UNKNOWN
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+
+# UNET SEGMENT
+
+

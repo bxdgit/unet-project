@@ -1,0 +1,3 @@
+[console_scripts]
+infer = segmentcircle.infer:main
+
