@@ -34,10 +34,11 @@ def main():
         exit()
     # print("parameter dcmfile is :",args.dcmfile)
     # print("parameter labelfile is :",args.labelmap)
+    dcmfile_abs = os.path.realpath(args.dcmfile)
+    labelmap_abs = os.path.realpath(args.labelmap)
 
 
-
-    dcm_data = {"img": args.dcmfile}
+    dcm_data = {"img": dcmfile_abs}
     # define transforms for image and segmentation
     infer_transforms = Compose(
         [            
@@ -55,7 +56,7 @@ def main():
     #后处理Compose
     post_trans = Compose([EnsureType(), Activations(sigmoid=True), AsDiscrete(threshold_values=True)])
     #定义保存文件对象
-    saver = SaveImage(output_dir=args.labelmap, output_ext=".nii.gz", output_postfix="segmnet")
+    saver = SaveImage(output_dir=labelmap_abs, output_ext=".nii.gz", output_postfix="segmnet")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     model = UNet(
